@@ -24,7 +24,7 @@ def get_config():
     parser.add_argument("--seed", type=int, default=1234)
 
     # training configuration
-    parser.add_argument("--timesteps_per_batch", type=int, default=50000,
+    parser.add_argument("--timesteps_per_batch", type=int, default=2050,
                         help='number of steps in the rollout')
     parser.add_argument("--max_timesteps", type=int, default=1e6)
     parser.add_argument("--advantage_method", type=str, default='gae',
@@ -82,7 +82,7 @@ def get_config():
     parser.add_argument('--debug', type=int, default=0)
     parser.add_argument('--write_log', type=int, default=1)
     parser.add_argument('--write_summary', type=int, default=1)
-    parser.add_argument("--monitor", type=int, default=1)
+    parser.add_argument("--monitor", type=int, default=0)
     parser.add_argument("--test", type=int, default=0,
                         help='if not 0, test for this number of episodes')
 
@@ -179,7 +179,7 @@ def get_ggnn_config(parser):
                         can use "SnakeFour2SnakeThree"
                         ''')
     parser.add_argument("--logstd_option", type=str,
-                        default='fix_0.0',
+                        default='load',
                         help='''
                             @"load":
                                 load the logstd as what it should be
