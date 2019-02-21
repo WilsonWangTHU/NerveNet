@@ -2,6 +2,8 @@
 It is the github repo for the paper: [NerveNet: Learning Structured Policy with Graph Neural Networks](http://www.cs.toronto.edu/~tingwuwang/nervenet.html).
 # Dependency
 
+The repo is written in Python 2.7. You might need to modify the code repo for compatibility in Python 3.x. Sorry for the inconvenience!
+
 ## 1. tensorflow >= 1.0.1
 ```bash
 pip install tensorflow-gpu
